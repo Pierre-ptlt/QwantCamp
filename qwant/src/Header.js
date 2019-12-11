@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import myImage from './images/logoQwant.jpg'
 import myQoz from './images/Qoz-logo.svg'
-import './App.css';
+import './css/Header.css';
 
 class Header extends Component{
     render() {
