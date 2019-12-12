@@ -76,8 +76,6 @@ class Header extends Component{
                         <a href="/" className="link_section">Paramètre</a>
                     </nav>
                 </div>
-                <br/>
-                <br/>
                 <hr/>
             </div>
         );
