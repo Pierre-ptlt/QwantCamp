@@ -1,3 +1,9 @@
+@media(min-width: 768px) and (max-width: 1388px) {
+    body{
+        width: 100%;
+    }
+}
+
 .search_options {
     float: right;
     width: 55%;
@@ -5,8 +11,9 @@
 }
 
 .Qoz_options {
-    height: 20px;
-    padding: 10px;
+    height: 15px;
+    padding: 20px;
+    text-align: center;
 }
 
 .search_bar {
@@ -42,14 +49,14 @@
 [type="checkbox"]:not(:checked) + label:before,
 [type="checkbox"]:checked + label:before {
     left: 0; top: 0;
-    width: 80px; height: 30px;
+    width: 50px; height: 20px;
     background: #DDDDDD;
     border-radius: 6px;
     transition: background-color .2s;
 }
 [type="checkbox"]:not(:checked) + label:after,
 [type="checkbox"]:checked + label:after {
-    width: 30px; height: 30px;
+    width: 20px; height: 20px;
     transition: all .2s;
     border-radius: 6px 0 0 6px;
     background: #7F8C9A;
@@ -62,7 +69,7 @@
 }
 [type="checkbox"]:checked + label:after {
     background: #39D2B4;
-    top: 0; left: 51px;
+    top: 0; left: 31px;
     border-radius: 0 6px 6px 0;
 }
 
@@ -70,19 +77,19 @@
 [type="checkbox"]:not(:checked) + label .ui:before,
 [type="checkbox"]:checked + label .ui:after {
     position: absolute;
-    left: 6px;
-    width: 65px;
+    left: 2px;
+    width: 35px;
     border-radius: 15px;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: bold;
-    line-height: 22px;
+    line-height: 12px;
     transition: all .2s;
 }
 
 [type="checkbox"]:not(:checked) + label .ui:before {
     font-family: 'FontAwesome';
     content: "\f00d";
-    left: 46px;
+    left: 36px;
     margin-top: 3px;
 }
 [type="checkbox"]:checked + label .ui:after {
@@ -101,6 +108,10 @@
     text-align: right;
 }
 
+.global_search {
+    width: 100%;
+}
+
 .divQoz {
     margin-top: -40px;
     margin-left: 70px;
@@ -110,6 +121,8 @@
     position: absolute;
     border: none;
     margin-top: 15px;
+    font-size: 15px;
+    color: #012830;
     width: 500px;
     text-decoration: none;
 }
@@ -120,5 +133,48 @@
 
 .search_logo {
     height: 30px;
-    padding: 7px;
+    padding: 6px;
+}
+
+.magnifyingGlass {
+    height: 17px;
+    padding-bottom: 10px;
+    /*margin-left: 520px;*/
+}
+
+.icone_produit {
+    text-decoration: none;
+    color: black;
+}
+
+.link_magnifying {
+    padding-left: 86%;
+}
+
+.menuProduit {
+    float: right;
+    margin-top: -40px;
+}
+
+.imgIconeProduit {
+    margin-right: 20px;
+}
+
+.nav1_section {
+    display: inline;
+    margin-left: 50px;
+}
+
+.nav2_section {
+    display: inline;
+    margin-left: 10px;
+}
+
+.link_section {
+    display: inline;
+    font-size: 13px;
+    margin: 8px;
+    color: #5c6f84;
+    text-decoration: none;
+    font-family: Helvetica, Arial, Noto Sans, Ubuntu;
 }
