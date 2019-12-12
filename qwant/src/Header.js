@@ -66,8 +66,8 @@ class Header extends Component{
                         <div className="dropdown">
                             <button className="dropbtn"><p className="link_section">Plus</p></button>
                             <div className="dropdown-content">
-                                <a href="#">Causes</a>
-                                <a href="#">Musiques</a>
+                                <a className="link_plus" href="#"><span>Causes</span></a>
+                                <a className="link_plus" href="#"><span>Musiques</span></a>
                             </div>
                         </div>
                         <a href="/" className="link_section">À propos</a>
