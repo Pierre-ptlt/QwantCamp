@@ -16,10 +16,9 @@
 }
 
 .search_bar {
-    padding: 15px;
+    padding: 12px;
     display: inline;
     width: 45%;
-    margin-top: 20px;
     margin-left: 20px;
     border: 1px solid gray;
     border-radius: 30px;
@@ -117,6 +116,11 @@
     margin-left: 70px;
 }
 
+.divTest {
+    display: inline;
+    text-align: right;
+}
+
 .search_text {
     border: none;
     margin-top: 15px;
@@ -174,12 +178,12 @@
 
 .nav1_section {
     display: inline;
-    margin-left: 40px;
+    margin-left: 110px;
 }
 
 .nav2_section {
     display: inline;
-    margin-left: 40px;
+    margin-left: 100px;
 
 }
 
