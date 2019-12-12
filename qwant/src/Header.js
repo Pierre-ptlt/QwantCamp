@@ -25,8 +25,24 @@ class Header extends Component{
                          </label>
                          </p>
                         <div className="menuProduit">
-                            <button className="dropbtn1"><img className="imgIconeProduit" src={inconeproduit}/></button>
-
+                            <div className="dropdown">
+                                <button className="dropbtn1"><img className="imgIconeProduit" src={inconeproduit}/></button>
+                                <div className="dropdown-content">
+                                    <table>
+                                        <tr>
+                                            <td><a href="/">Qwant</a></td>
+                                            <td><a href="/">Junior</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="/">Maps</a></td>
+                                            <td><a href="/">Music</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="/">Causes</a></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
                             <span className="text_produit">Produits</span>
                         </div>
                     </div>

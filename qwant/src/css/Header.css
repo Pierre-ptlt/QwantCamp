@@ -149,21 +149,22 @@
 .menuProduit {
     float: right;
     margin-top: -40px;
-    padding-right: 20px;
+    padding-right: 100px;
 }
 
 .imgIconeProduit {
     margin-right: 20px;
 }
 
+
 .nav1_section {
     display: inline;
-    margin-left: 50px;
+    margin-left: 40px;
 }
 
 .nav2_section {
     display: inline;
-    margin-left: 10px;
+    margin-left: 40px;
 
 }
 
@@ -196,6 +197,7 @@
     font-size: 16px;
     border: none;
     cursor: pointer;
+    border-radius: 10px;
 }
 
 .dropbtn1 {
@@ -204,11 +206,10 @@
     border: none;
     cursor: pointer;
     margin-right: 30px;
-    border-radius: 20px;
+    border-radius: 3px;
 }
 
 .dropdown {
-    position: relative;
     display: inline-block;
 }
 
@@ -229,10 +230,15 @@
     display: block;
 }
 
-.dropdown-content a:hover {background-color: #f1f1f1}
+.dropdown-content a:hover {background-color: #E6E6E6}
 
 .dropdown:hover .dropdown-content {
     display: block;
+}
+
+.text_produit {
+    position: absolute;
+    margin-left: -15px;
 }
 
 
