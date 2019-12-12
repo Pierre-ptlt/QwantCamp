@@ -5,8 +5,7 @@
 }
 
 .search_options {
-    float: right;
-    width: 55%;
+    display: inline;
     padding: 25px;
 }
 
@@ -17,8 +16,9 @@
 }
 
 .search_bar {
-    float: left;
-    width: 40%;
+    padding: 15px;
+    display: inline;
+    width: 45%;
     margin-top: 20px;
     margin-left: 20px;
     border: 1px solid gray;
@@ -36,8 +36,8 @@
 [type="checkbox"]:not(:checked) + label,
 [type="checkbox"]:checked + label {
     position: relative;
-    padding-left: 95px;
     cursor: pointer;
+    margin-left: 630px;
 }
 [type="checkbox"]:not(:checked) + label:before,
 [type="checkbox"]:checked + label:before,
@@ -118,12 +118,12 @@
 }
 
 .search_text {
-    position: absolute;
     border: none;
     margin-top: 15px;
     font-size: 15px;
     color: #012830;
     width: 500px;
+    margin-left: 10px;
     text-decoration: none;
 }
 
@@ -131,15 +131,14 @@
     outline: none;
 }
 
+
 .search_logo {
     height: 30px;
-    padding: 6px;
+    margin-bottom: -5px;
 }
 
 .magnifyingGlass {
     height: 17px;
-    padding-bottom: 10px;
-    /*margin-left: 520px;*/
 }
 
 .icone_produit {
@@ -147,13 +146,10 @@
     color: black;
 }
 
-.link_magnifying {
-    padding-left: 86%;
-}
-
 .menuProduit {
     float: right;
     margin-top: -40px;
+    padding-right: 20px;
 }
 
 .imgIconeProduit {
@@ -168,6 +164,12 @@
 .nav2_section {
     display: inline;
     margin-left: 10px;
+
+}
+
+.nav3_section {
+    display: inline;
+    margin-left: 10px;
 }
 
 .link_section {
@@ -178,3 +180,59 @@
     text-decoration: none;
     font-family: Helvetica, Arial, Noto Sans, Ubuntu;
 }
+
+
+.btnPlus {
+    text-decoration: none;
+}
+
+.second {
+    width: 100%;
+    margin-top: 2px;
+}
+
+
+.dropbtn {
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropbtn1 {
+    width: 36px;
+    font-size: 12px;
+    border: none;
+    cursor: pointer;
+    margin-right: 30px;
+    border-radius: 20px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    padding: 12px 16px;
+    text-decoration: none;
+    font-size: 12px;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
