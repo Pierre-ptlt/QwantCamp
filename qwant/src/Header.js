@@ -3,6 +3,11 @@ import myImage from './images/logoQwant.jpg';
 import myQoz from './images/Qoz-logo.svg';
 import manifying from './images/magnifyingglass.svg';
 import inconeproduit from './images/iconProduit.svg';
+import iconeQwant from './images/icon-qwant.svg';
+import iconeCauses from './images/icon-causes.svg';
+import iconeMaps from './images/icon-maps.svg';
+import iconeJunior from './images/icon-junior.svg';
+import iconeMusique from './images/icon-music.svg';
 import './css/Header.css';
 
 class Header extends Component{
@@ -30,15 +35,15 @@ class Header extends Component{
                                 <div className="dropdown-content">
                                     <table>
                                         <tr>
-                                            <td><a href="/">Qwant</a></td>
-                                            <td><a href="/">Junior</a></td>
+                                            <td><a className="link_spec_produit" href="/"><img src={iconeQwant}/><span className="spec_produit">Qwant</span></a></td>
+                                            <td><a className="link_spec_produit" href="/"><img src={iconeJunior}/><span className="spec_produit">Junior</span></a></td>
                                         </tr>
                                         <tr>
-                                            <td><a href="/">Maps</a></td>
-                                            <td><a href="/">Music</a></td>
+                                            <td><a className="link_spec_produit" href="/"><img src={iconeMaps}/><span className="spec_produit">Maps</span></a></td>
+                                            <td><a className="link_spec_produit" href="/"><img src={iconeMusique}/><span className="spec_produit">Music</span></a></td>
                                         </tr>
                                         <tr>
-                                            <td><a href="/">Causes</a></td>
+                                            <td><a className="link_spec_produit" href="/"><img src={iconeCauses}/><span className="spec_produit">Causes</span></a></td>
                                         </tr>
                                     </table>
                                 </div>

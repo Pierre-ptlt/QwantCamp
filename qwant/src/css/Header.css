@@ -149,11 +149,21 @@
 .menuProduit {
     float: right;
     margin-top: -40px;
-    padding-right: 100px;
+    padding-right: 150px;
 }
 
 .imgIconeProduit {
     margin-right: 20px;
+}
+
+.spec_produit {
+    font-size: 15px;
+    padding: 3px;
+}
+
+.link_spec_produit {
+    text-decoration: none;
+    color: black;
 }
 
 
