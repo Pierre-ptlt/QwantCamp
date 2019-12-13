@@ -12,7 +12,7 @@
 .Qoz_options {
     height: 15px;
     padding: 20px;
-    text-align: center;
+    margin-left: 150px;
 }
 
 .search_bar {
@@ -22,6 +22,8 @@
     margin-left: 20px;
     border: 1px solid gray;
     border-radius: 30px;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
+    transition: all 200ms ease-out;
 }
 
 
@@ -36,7 +38,7 @@
 [type="checkbox"]:checked + label {
     position: relative;
     cursor: pointer;
-    margin-left: 630px;
+    margin-left: 635px;
 }
 [type="checkbox"]:not(:checked) + label:before,
 [type="checkbox"]:checked + label:before,
@@ -113,7 +115,7 @@
 
 .divQoz {
     margin-top: -40px;
-    margin-left: 70px;
+    margin-left: 215px;
 }
 
 .divTest {
@@ -183,7 +185,7 @@
 
 .nav2_section {
     display: inline;
-    margin-left: 100px;
+    margin-left: 250px;
 
 }
 
@@ -200,6 +202,11 @@
     text-decoration: none;
     font-family: Helvetica, Arial, Noto Sans, Ubuntu;
 }
+
+.link_section:hover {
+    font-size: 14px;
+}
+
 
 
 .btnPlus {
@@ -259,6 +266,19 @@
 .text_produit {
     position: absolute;
     margin-left: -15px;
+}
+
+.questionMark {
+    margin-top: 3px;
+}
+
+.btnQuestion {
+    border: none;
+    margin-left: 65px;
+    width: 20px;
+    border-radius: 15px;
+
+
 }
 
 

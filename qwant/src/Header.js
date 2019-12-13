@@ -8,6 +8,7 @@ import iconeCauses from './images/icon-causes.svg';
 import iconeMaps from './images/icon-maps.svg';
 import iconeJunior from './images/icon-junior.svg';
 import iconeMusique from './images/icon-music.svg';
+import questionMark from './images/question-mark.svg';
 import './css/Header.css';
 
 class Header extends Component{
@@ -28,6 +29,11 @@ class Header extends Component{
                          <label htmlFor="test1">
                              <span className="ui"></span>
                          </label>
+                             <button className="btnQuestion">
+                                 <a href="https://www.qwant.com/causes/fr_fr/reports?display=all_assos">
+                                 <img className="questionMark" src={questionMark}/>
+                                 </a>
+                             </button>
                          </p>
                         <div className="menuProduit">
                             <div className="dropdown">
