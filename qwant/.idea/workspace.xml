@@ -20,7 +20,7 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/images" />
+    <property name="last_opened_file_path" value="F:/wamp64/www/testJS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -80,8 +80,11 @@
       <workItem from="1575972775195" duration="15482000" />
       <workItem from="1576052748910" duration="28956000" />
       <workItem from="1576138620843" duration="39572000" />
-      <workItem from="1576224109537" duration="3499000" />
-      <workItem from="1576229403384" duration="243000" />
+      <workItem from="1576224109537" duration="3043000" />
+      <workItem from="1576241111345" duration="3145000" />
+      <workItem from="1576425536526" duration="1229000" />
+      <workItem from="1576447219053" duration="302000" />
+      <workItem from="1576485448690" duration="9150000" />
     </task>
     <servers />
   </component>
