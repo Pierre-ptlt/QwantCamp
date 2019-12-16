@@ -1,6 +1,6 @@
 import React from 'react';
-import logo from './logo.svg';
 import Header from './Header';
+import QwantNewsApp from './APIconfig';
 import './App.css';
 
 
@@ -8,7 +8,9 @@ function App() {
     return(
         <div>
             <Header/>
+            <QwantNewsApp/>
         </div>
+
     );
 }
 
