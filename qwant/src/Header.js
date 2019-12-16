@@ -25,12 +25,13 @@ class Header extends Component{
                     </div>
                     <div className="search_options">
                          <img className="Qoz_options" src={myQoz}/>
-                         <p className="divQoz"><input type="checkbox" id="test1"/>
-                         <label htmlFor="test1">
-                             <span className="ui"></span>
-                         </label>
+                         <p className="divQoz">
+                             <label className="switch">
+                                 <input type="checkbox"/>
+                                     <span className="slider round"></span>
+                             </label>
                              <button className="btnQuestion">
-                                 <a href="https://www.qwant.com/causes/fr_fr/reports?display=all_assos">
+                                 <a href="https://www.qwant.com/causes/fr_fr/reports?display=all_assos" target="_blank">
                                  <img className="questionMark" src={questionMark}/>
                                  </a>
                              </button>
@@ -82,7 +83,7 @@ class Header extends Component{
                         <a href="/" className="link_section">Paramètre</a>
                     </nav>
                 </div>
-                <hr/>
+                <hr className="hr"/>
             </div>
         );
     }
