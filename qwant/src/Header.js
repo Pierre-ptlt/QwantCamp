@@ -12,7 +12,30 @@ import questionMark from './images/question-mark.svg';
 import './css/Header.css';
 
 class Header extends Component{
+
+
+    constructor(props) {
+        super(props);
+        this.handleCheckboxChecked = this.handleCheckboxChecked.bind(this);
+        this.handleCheckboxUnChecked = this.handleCheckboxUnChecked.bind(this);
+        this.state = {checkbox: true};
+    }
+
+    handleCheckboxChecked() {
+       this.setState({checkbox: true});
+    }
+
+    handleCheckboxUnChecked() {
+        this.setState({checkbox: false});
+    }
+
+
     render() {
+
+        const checkbox = this.state.checkbox;
+        let check;
+        
+
         return(
             <div>
                 <div className="global_search">
@@ -27,7 +50,7 @@ class Header extends Component{
                          <img className="Qoz_options" src={myQoz}/>
                          <p className="divQoz">
                              <label className="switch">
-                                 <input type="checkbox"/>
+                                 <input name="checkbox" type="checkbox" checked={this.state.checkbox}/>
                                      <span className="slider round"></span>
                              </label>
                              <button className="btnQuestion">
