@@ -34,7 +34,6 @@ class Header extends Component{
 
         const checkbox = this.state.checkbox;
         let check;
-        
 
         return(
             <div>
