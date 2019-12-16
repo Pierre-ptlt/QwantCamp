@@ -56,6 +56,16 @@
       </list>
     </option>
   </component>
+  <component name="RunManager">
+    <configuration name="API.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/API.js" working-dir="$PROJECT_DIR$/src">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.API.js" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
