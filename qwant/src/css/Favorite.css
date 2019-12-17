@@ -1,0 +1,59 @@
+.left-body{
+    height: 850px;
+    width: 230px;
+}
+.favo_button_display{
+    margin-left: 22%;
+    padding-left: 30px;
+    padding-right: 30px;
+    outline: none;
+    font-size: 13px;
+    border: none;
+    color: #5c6f84;
+    text-decoration: none;
+    cursor: pointer;
+}
+.favo_list{
+    list-style: none;
+    color: #5c6f84;
+    background-color: #529FD7;
+    padding-top: 30px;
+}
+.favo_list span{
+    padding-left: 5px;
+}
+.favo_bar{
+    height: 100%;
+    list-style: none;
+    color: #5c6f84;
+    background-color: #529FD7;
+}
+.favo_add{
+    position: absolute;
+    bottom: 0;
+    margin-left: 25px;
+}
+.box_input{
+    border: 1px solid #529FD7;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 10px;
+}
+.add_button{
+    padding: 4px;
+    background-color: white;
+    margin-left: 10px;
+    border: 1px solid #529FD7;
+    outline: none;
+    border-radius: 5px;
+}
+.button_X{
+    margin-left: 40px;
+    background-color: #529FD7;
+    border: 1px solid #529FD7;
+    cursor: pointer;
+    outline: none;
+}
+.display_bar{
+    display: none;
+}
