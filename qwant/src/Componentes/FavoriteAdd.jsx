@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-
+import { Link } from 'react-router-dom';
 
 class FavoriteAdd extends Component {
     state= {
@@ -16,6 +16,7 @@ class FavoriteAdd extends Component {
         this.props.onFavoriteAdd({id, link});
         this.setState({newFavorite: " "})
     };
+
 
     render() {
         return <form onSubmit={this.handleFormula}>
