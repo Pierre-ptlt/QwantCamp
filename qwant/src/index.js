@@ -5,10 +5,7 @@ import './index.css';
 import App from './App';
 import QwantNewsApp from './APIconfig';
 import * as serviceWorker from './serviceWorker';
-<<<<<<< HEAD
-=======
 import FavoriteBar from "./FavoriteBar";
->>>>>>> 2a7490b2f79a8e2da7bdd4c7f5fad0376c7ddff6
 import Header from "./Header";
 
 ReactDOM.render(<Header />, document.getElementById('root'));
