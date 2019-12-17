@@ -1,0 +1,32 @@
+.left-body{
+
+    height: 1000px;
+    width: 13%;
+}
+.favo_list{
+    list-style: none;
+    color: gray;
+    background-color: #5C156C;
+}
+.favo_list h4{
+    padding-top: 50px;
+}
+.favo_list span{
+    padding-left: 10px;
+}
+.favo_bar{
+    height: 100%;
+    list-style: none;
+    color: gray;
+    background-color: #5C156C;
+}
+.favo_add{
+    position: absolute;
+    bottom: 0;
+}
+.button_X{
+    margin-left: 10px;
+}
+.display_bar{
+    display: none;
+}
