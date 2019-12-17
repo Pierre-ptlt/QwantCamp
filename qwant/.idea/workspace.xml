@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="bd49554e-f7f8-4466-a3cc-a9505a0cba08" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Componentes/FavoriteAdd.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Componentes/FavoriteAdd.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Componentes/FavoriteList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Componentes/FavoriteList.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FavoriteBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/FavoriteBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/Favorite.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/Favorite.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +107,7 @@
       <workItem from="1576447219053" duration="302000" />
       <workItem from="1576485448690" duration="9150000" />
       <workItem from="1576537640474" duration="5000" />
-      <workItem from="1576537661875" duration="18887000" />
+      <workItem from="1576537661875" duration="19275000" />
     </task>
     <servers />
   </component>
