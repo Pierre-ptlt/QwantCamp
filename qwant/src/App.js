@@ -10,6 +10,7 @@ function App() {
         <div>
             <Header/>
             <FavoriteBar/>
+            <QwantNewsApp/>
         </div>
 
     );

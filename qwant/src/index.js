@@ -9,7 +9,7 @@ import FavoriteBar from "./FavoriteBar";
 import Header from "./Header";
 
 ReactDOM.render(<Header />, document.getElementById('root'));
-//ReactDOM.render(<QwantNewsApp/>, document.getElementById("body"));
+ReactDOM.render(<QwantNewsApp/>, document.getElementById("body"));
 ReactDOM.render(<FavoriteBar/>, document.getElementById("left-body"));
 
 // If you want your app to work offline and load faster, you can change
