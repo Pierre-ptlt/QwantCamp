@@ -168,6 +168,7 @@ class QwantNewsApp extends React.Component {
         this.DoAFetch();
     }
 
+
     render() {
         // Affiche page news
         return (

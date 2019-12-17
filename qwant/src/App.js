@@ -4,6 +4,7 @@ import QwantNewsApp from './APIconfig';
 import './App.css';
 
 
+
 function App() {
     return(
         <div>
