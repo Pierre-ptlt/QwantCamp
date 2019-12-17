@@ -11,29 +11,44 @@ import iconeMusique from './images/icon-music.svg';
 import questionMark from './images/question-mark.svg';
 import './css/Header.css';
 
+function InputChecked() {
+    return(
+        <div className="divNotPopQoz">
+            <label>Qoz est désactivé</label>
+        </div>
+    );
+}
+
+function InputUnChecked() {
+    return(
+        <div className="divPopQoz">
+            <label>Qoz est activé</label>
+        </div>
+    );
+}
+
+
 class Header extends Component{
 
-
-    constructor(props) {
-        super(props);
+    constructor() {
+        super();
+        this.state = {isChecked: true};
         this.handleCheckboxChecked = this.handleCheckboxChecked.bind(this);
-        this.handleCheckboxUnChecked = this.handleCheckboxUnChecked.bind(this);
-        this.state = {checkbox: true};
     }
 
     handleCheckboxChecked() {
-       this.setState({checkbox: true});
+        this.setState({isChecked: !this.state.isChecked});
     }
-
-    handleCheckboxUnChecked() {
-        this.setState({checkbox: false});
-    }
-
 
     render() {
 
-        const checkbox = this.state.checkbox;
-        let check;
+        let txt;
+        if (this.state.isChecked) {
+            txt = <InputUnChecked/>
+        }
+        else {
+          txt = <InputChecked/>
+        }
 
         return(
             <div>
@@ -49,7 +64,7 @@ class Header extends Component{
                          <img className="Qoz_options" src={myQoz}/>
                          <p className="divQoz">
                              <label className="switch">
-                                 <input name="checkbox" type="checkbox" checked={this.state.checkbox}/>
+                                 <input name="checkbox" type="checkbox" checked={this.state.isChecked} onChange={this.handleCheckboxChecked} />
                                      <span className="slider round"></span>
                              </label>
                              <button className="btnQuestion">
@@ -104,12 +119,18 @@ class Header extends Component{
                     <nav className="nav3_section">
                         <a href="/" className="link_section">Paramètre</a>
                     </nav>
+                    <nav>
+                        <div>
+                            {txt}
+                        </div>
+                    </nav>
                 </div>
                 <hr className="hr"/>
             </div>
         );
     }
 }
+
 
 export default Header;
 
