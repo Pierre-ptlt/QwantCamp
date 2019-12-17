@@ -19,9 +19,9 @@ class FavoriteAdd extends Component {
 
     render() {
         return <form onSubmit={this.handleFormula}>
-                    <input value={this.state.newFavorite} onChange={this.handleChange} type="text"
+                    <input className="box_input" value={this.state.newFavorite} onChange={this.handleChange} type="text"
                         placeholder="Add your favorite"/>
-                    <button>Add</button>
+                    <button className="add_button">Add</button>
                 </form>
     }
 }

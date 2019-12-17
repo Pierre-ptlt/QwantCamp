@@ -50,17 +50,17 @@ class FavoriteBar extends Component {
     render() {
         return (
             <div className="left-body">
-                <button onClick={() => this.handleDisplay()}>Favorites</button>
+                <button className="favo_button_display" onClick={() => this.handleDisplay()}>Favorites</button>
                 <div ref={this.displayFavoriteBar} className="display_bar">
                     <ul className="favo_list">
                         {!this.state.isHidden}
                         {this.state.favorites.map(favorite => (
                             <FavoriteList list={favorite} onDelete={this.handleDelete}/>
                         ))}
-                        <div className="favo_add">
-                            <FavoriteAdd onFavoriteAdd={this.handleAdd}/>
-                        </div>
                     </ul>
+                    <div className="favo_add">
+                        <FavoriteAdd onFavoriteAdd={this.handleAdd}/>
+                    </div>
                 </div>
             </div>
         );
