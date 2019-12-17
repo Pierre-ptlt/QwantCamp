@@ -44,15 +44,10 @@ class Header extends Component{
 
         let txt;
         if (this.state.isChecked) {
-
-            setTimeout(() => {
-                txt = <InputUnChecked/>;
-            }, 3000);
+            txt = <InputUnChecked/>
         }
         else {
-            setTimeout(() => {
-                txt = <InputChecked/>;
-            }, 3000);
+          txt = <InputChecked/>
         }
 
         return(
