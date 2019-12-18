@@ -9,9 +9,8 @@ import FavoriteBar from "./FavoriteBar";
 function App() {
     return(
         <div>
-            <Header/>
-            <FavoriteBar/>
             <QwantNewsApp/>
+            <Header/>
         </div>
 
     );
