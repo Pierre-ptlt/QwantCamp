@@ -9,7 +9,7 @@ import FavoriteBar from "./FavoriteBar";
 function App() {
     return(
         <div>
-            <Header/>
+            <Header callBack = {this.handleSubmitSearch} />
             <FavoriteBar/>
             <QwantNewsApp/>
         </div>

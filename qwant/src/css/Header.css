@@ -146,17 +146,20 @@
     height: 35px;
     width: 300px;
     border-radius: 3px;
-    opacity: 70%;
 }
 
 .divPopQoz {
     text-align: center;
-    background-color: #A9EEB6;
+    background-color: #71F912;
     margin-left: 1200px;
     height: 35px;
     width: 300px;
     border-radius: 3px;
     opacity: 70%;
+}
+
+.divText {
+    font-size: 14px;
 }
 
 
@@ -190,6 +193,9 @@
     display: inline-block;
 }
 
+.global_search form {
+    display: inline;
+}
 
 .dropdown-content {
     display: none;

@@ -19,7 +19,6 @@ const fetchOptions = {
 };
 
 function QwantOptions() {
-
     this.Query = "france";
     this.Locale = "fr_fr";
     this.Count = 10;
@@ -31,12 +30,13 @@ function QwantOptions() {
 function PrepareQwantOptions(queryOptions) {
     let strOptions = "";
 
-    let knownOptions = {
+    const knownOptions = {
         Query: "q=",
         Locale: "locale=",
         Count: "count=",
         SafeSearch: "safesearch=",
         Freshness: "freshness=",
+        Offset: "offset=",
         Order: "order=",
         Source: "source=",
         Filter: "f=h%"
@@ -71,33 +71,36 @@ class QwantArticle extends React.Component {
         let htmlMarkup = null;
 
         if (this.props.article.media.length > 0)
-        {
             htmlMarkup = `
-                <li className = "Article">
-                    <a href="${this.props.article.url}" target=_blank>${this.props.article.title}</a>
-                        <p>
-                            <a href="${this.props.article.url}" target=_blank>
-                            <img src = "${this.props.article.media[0].pict.url}" alt = "${this.props.article.title}" className = "ImageArticle" height = "${this.props.article.media[0].pict.height}" />
-                            </a>
-                        </p>
-                </li>
-                <p>${this.props.article.desc} (${QwantDate(this.props.article.date)})</p>
-                <p>Source : ${this.props.article.domain}</p>
-                `;
-        }
+        <li className = "Article">
+          <a href="${this.props.article.url}" target=_blank>${this.props.article.title}</a>
+          <p>
+             <a href="${this.props.article.url}" target=_blank>
+               <img src = "${this.props.article.media[0].pict.url}" alt = "article image"  height = "${this.props.article.media[0].pict.height}" />
+             </a>
+          </p>
+        </li>
+        <p>${this.props.article.desc} (${QwantDate(this.props.article.date)})</p>
+        <p>Source : ${this.props.article.domain}</p>
+      `;
         else
-        {
             htmlMarkup = `
-                <li className = "Article">
-                    <a href="${this.props.article.url}" target=_blank>${this.props.article.title}</a>
-                </li>
-                <p>${this.props.article.desc} (${QwantDate(this.props.article.date)})</p>
-                <p>Source : ${this.props.article.domain}</p>
-                `;
-        }
+        <li className = "Article">
+          <a href="${this.props.article.url}" target=_blank>${this.props.article.title}</a>
+          <p>
+          <a href="${this.props.article.url}" target=_blank>
+          <img src="https://icon-library.net/images/no-image-available-icon/no-image-available-icon-6.jpg"  width="300" height="168" alt="empty image">
+          </a>
+          </p>
+        </li>
+        <p>${this.props.article.desc} (${QwantDate(this.props.article.date)})</p>
+        <p>Source : ${this.props.article.domain}</p>
+
+      `;
+        console.log(htmlMarkup);
 
         return (
-            <p dangerouslySetInnerHTML={{__html: htmlMarkup}}/>
+            <p dangerouslySetInnerHTML={{ __html: htmlMarkup }} />
         );
     }
 }
@@ -106,10 +109,10 @@ class QwantArticle extends React.Component {
 class QwantArticles extends React.Component {
     render() {
         if (this.props.articles.length === 0)
-            return (<p><b>Chargement des articles ...</b></p>);
+            return( <p><b>Chargement des articles ...</b></p> );
 
         const articles = this.props.articles.map((item) => (
-            <QwantArticle article={item}/>
+            <QwantArticle article={item} />
         ));
 
         return (
@@ -124,7 +127,6 @@ class QwantNewsApp extends React.Component {
     constructor(props) {
         super(props);
         this.handleSubmitSearch = this.handleSubmitSearch.bind(this);
-        this.handleChangeSearch = this.handleChangeSearch.bind(this);
 
         this.queryOptions = new QwantOptions();
         this.lastQuery = "";
@@ -134,7 +136,6 @@ class QwantNewsApp extends React.Component {
             respData: [],
         };
     }
-
     DoAFetch() {
         if (this.lookFor.length > 0)
             this.queryOptions.Query = this.lookFor;
@@ -150,36 +151,32 @@ class QwantNewsApp extends React.Component {
         fetch(url, fetchOptions).then(response => {
             response.json().then(jsonData => {
                 globalDateLocale = jsonData.query.locale.replace(/_/g, "-");
-                this.setState({respData: jsonData.result.items});
+                this.setState({ respData: jsonData.result.items });
             });
         });
     }
+
 
     componentDidMount() {
         this.DoAFetch();
     }
 
-    handleChangeSearch(event) {
-        this.lookFor = event.target.value;
-    }
-
-    handleSubmitSearch(event) {
-        event.preventDefault();
+    handleSubmitSearch() {
+        this.lookFor = document.getElementById("SearchInput").getAttribute("value");
+        console.log(this.lookFor);
         this.DoAFetch();
     }
 
-
     render() {
+
         // Affiche page news
         return (
             <div className="QwantNews">
-                <h1>Qwant News</h1>
-                <form onSubmit={this.handleSubmitSearch}>
-                    <input type="text" value={this.state.lookFor} onChange={this.handleChangeSearch}/>
-                </form>
+
                 <div className="News">
-                    <h1>A la une...</h1>
-                    <QwantArticles articles={this.state.respData}/>
+                    <QwantArticles articles = {this.state.respData} />
+                </div>
+                <div>
                 </div>
             </div>
         );
