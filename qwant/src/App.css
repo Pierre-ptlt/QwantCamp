@@ -1,0 +1,12 @@
+.div-left{
+  float: left;
+  margin-right: 10%;
+  margin-bottom: 1%;
+  margin-left: 1px;
+  margin-right: 5%;
+}
+
+.Articles {
+  column-count: 2;
+  width: 55%;
+}

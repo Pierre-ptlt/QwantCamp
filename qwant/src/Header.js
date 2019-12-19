@@ -44,12 +44,22 @@ class Header extends Component{
     }
 
 
-    getData(){
-        setTimeout(() => {
-            this.setState({myDivPop: true})
-        }, 3000)
-    }
+     /*getData(){
+         const timer = setTimeout(() => {
+             this.setState({myDivPop: true});
+             this.otherFunc()
+         }, 1000)
+     }
 
+
+     otherFunc() {
+         if (this.state.isChecked) {
+             return <InputChecked/>;
+         }
+         else if (!this.state.isChecked){
+             return <InputUnChecked/>;
+         }
+     }*/
 
 
     handleChangeSearch(event) {
@@ -70,21 +80,10 @@ class Header extends Component{
 
     render() {
 
-        let txt;
-        if (this.state.isChecked) {
-            txt = <InputChecked/>
-        }
-        else {
-          txt = <InputUnChecked/>
-        }
 
-        if (this.state.isChecked) {
-            this.getData()
-        }
-        else if (!this.state.isChecked) {
-            this.getData();
-        }
+       const heIsCheck = this.state.isChecked;
 
+        console.log(this.state.isChecked);
 
         return(
             <div>
@@ -159,9 +158,8 @@ class Header extends Component{
                         <a href="/" className="link_section">Paramètre</a>
                     </nav>
                     <nav>
-                        <div hidden={this.state.myDivPop}>
-                            {txt}
-                        </div>
+
+                        <div hidden={this.state.myDivPop}>{heIsCheck ? <InputChecked/> : <InputUnChecked/>}</div>
                     </nav>
                 </div>
                 <hr className="hr"/>

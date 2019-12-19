@@ -3,10 +3,9 @@ import FavoriteList from "./Componentes/FavoriteList";
 import FavoriteAdd from "./Componentes/FavoriteAdd";
 import "./css/Favorite.css"
 
-
 class FavoriteBar extends Component {
-    //< span aria-label = " une fusée décollant " role = " img " >   🚀 </ span >
-    // < span aria-hidden = " true " role = " img " >   🤫 </ span >
+    //< span aria-label = " une fusée décollant " role = "img" >   🚀 </ span >
+    //< span aria-hidden = "true" role = "img" >   🤫 </ span >
 
     displayFavoriteBar = React.createRef();
     constructor(props) {
