@@ -4,10 +4,12 @@
 }
 .favo_button_display{
     margin-left: 22%;
+    margin-bottom: 10%;
+    margin-top: 5%;
     padding-left: 30px;
     padding-right: 30px;
     outline: none;
-    font-size: 13px;
+    font-size: 14px;
     border: none;
     color: #5c6f84;
     text-decoration: none;
