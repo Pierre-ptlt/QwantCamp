@@ -1,9 +1,15 @@
 .div-left{
   float: left;
+<<<<<<< HEAD
+  margin-right: 10%;
+  margin-bottom: 1%;
+  margin-left: 1px;
+=======
   margin-right: 5%;
 }
 
 .Articles {
   column-count: 2;
   width: 55%
+>>>>>>> 22f6c78e74e22c3c6a3fa82b0c48cc6fa4ee8aab
 }
