@@ -1,4 +1,6 @@
 .div-left{
   float: left;
   margin-right: 10%;
+  margin-bottom: 1%;
+  margin-left: 1px;
 }
