@@ -1,10 +1,8 @@
 import React from 'react';
+import ReactDOM from "react-dom";
 import './App.css';
-<<<<<<< HEAD
-=======
 import Header from "./Header";
 import FavoriteBar from "./FavoriteBar";
->>>>>>> 22f6c78e74e22c3c6a3fa82b0c48cc6fa4ee8aab
 
 
 let globalDateLocale = "fr-FR";
@@ -20,6 +18,7 @@ const fetchOptions = {
         Token: "5dkCdp67D4a7zcOrSZrSqIqPmYZNf8Re"
     }
 };
+
 function QwantOptions() {
     this.Query = "france";
     this.Locale = "fr_fr";
@@ -54,6 +53,7 @@ function PrepareQwantOptions(queryOptions) {
     return strOptions;
 }
 
+
 function QwantDate(qwantDate) {
     const jsDate = new Date(0);
     jsDate.setSeconds(jsDate.getSeconds() + qwantDate);
@@ -65,9 +65,10 @@ function QwantDate(qwantDate) {
     });
 }
 
-
+// Rendering an article
 class QwantArticle extends React.Component {
     render() {
+
         let htmlMarkup = null;
 
         if (this.props.article.media.length > 0)
@@ -85,15 +86,6 @@ class QwantArticle extends React.Component {
       `;
         else
             htmlMarkup = `
-<<<<<<< HEAD
-                <li className = "Article">
-                    <a href="${this.props.article.url}" target=_blank>${this.props.article.title}</a>
-                </li>
-                <p>${this.props.article.desc} (${QwantDate(this.props.article.date)})</p>
-                <p>Source : ${this.props.article.domain}</p>
-                `;
-        }
-=======
         <li className="Article">
           <a href="${this.props.article.url}" target=_blank>${this.props.article.title}</a>
           <p>
@@ -108,41 +100,22 @@ class QwantArticle extends React.Component {
       `;
         console.log(htmlMarkup);
 
->>>>>>> 22f6c78e74e22c3c6a3fa82b0c48cc6fa4ee8aab
         return (
             <p dangerouslySetInnerHTML={{ __html: htmlMarkup }} />
         );
     }
 }
 
+// Affiche tous les articles
 class QwantArticles extends React.Component {
-    buttonArticle: React.createRef;
-    state= {
-      link: []
-    };
-    getUrl(singleUrl){          // récupération de l'url de l'article selectionné
-    const  link= [...this.state.link];
-    link.push(singleUrl);
-    this.setState({link: ""});
-        console.log(link)
-    };
-
     render() {
         if (this.props.articles.length === 0)
-<<<<<<< HEAD
-            return (<p><b>Chargement des articles ...</b></p>);
-        const articles = this.props.articles.map((item) => (      // ajout d'un bouton par article
-            <li>
-                <QwantArticle article={item}/>
-                <button ref={this.buttonArticle} onClick={()=> this.getUrl(item.url)} >Add Favorites List</button>
-            </li>
-=======
             return( <p><b>Chargement des articles ...</b></p> );
 
         const articles = this.props.articles.map((item) => (
             <QwantArticle article={item} />
->>>>>>> 22f6c78e74e22c3c6a3fa82b0c48cc6fa4ee8aab
         ));
+
         return (
             <div className="Articles">
                 <ul>{articles}</ul>
@@ -150,7 +123,6 @@ class QwantArticles extends React.Component {
         );
     }
 }
-
 
 class QwantNewsApp extends React.Component {
     constructor(props) {
@@ -170,6 +142,7 @@ class QwantNewsApp extends React.Component {
             this.queryOptions.Query = this.lookFor;
 
         const urlOptions = PrepareQwantOptions(this.queryOptions);
+        console.log(urlOptions);
         if (this.lastQuery === urlOptions)
             return;
         this.lastQuery = urlOptions;

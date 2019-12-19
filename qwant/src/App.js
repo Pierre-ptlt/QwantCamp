@@ -8,15 +8,11 @@ import './App.css';
 function App() {
     return(
         <div>
-<<<<<<< HEAD
-            <Header/>
                 <div className="div-left">
-                    <FavoriteBar/>
+                    <QwantNewsApp/>
                 </div>
             <QwantNewsApp />
-=======
             <QwantNewsApp/>
->>>>>>> 22f6c78e74e22c3c6a3fa82b0c48cc6fa4ee8aab
         </div>
     );
 }
