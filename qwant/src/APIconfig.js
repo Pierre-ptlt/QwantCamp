@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from "react-dom";
 import './App.css';
 import Header from "./Header";
+import FavoriteAdd from "./Componentes/FavoriteAdd";
 
 let globalDateLocale = "fr-FR";
 
@@ -100,28 +101,23 @@ class QwantArticle extends React.Component {
 
 class QwantArticles extends React.Component {
     buttonArticle: React.createRef;
-    test(singleUrl){
+    getUrl(singleUrl){        // récupération de l'url de l'article selectionné
 
+        console.log(singleUrl)
     };
 
     render() {
         if (this.props.articles.length === 0)
             return (<p><b>Chargement des articles ...</b></p>);
-        const articles = this.props.articles.map((item) => (
+        const articles = this.props.articles.map((item) => (      // ajout d'un bouton par article
             <li>
                 <QwantArticle article={item}/>
-                <button ref={this.buttonArticle} onClick={()=> this.test(item.url)} >Add Favorites List</button>
+                <button ref={this.buttonArticle} onClick={()=> this.getUrl(item.url)} >Add Favorites List</button>
             </li>
         ));
         return (
             <div className="Articles">
-
-                <ul>
-                    <li>
-                        {articles}
-                        {this.buttonArticle}
-                    </li>
-                </ul>
+                <ul>{articles}</ul>
             </div>
         );
     }
@@ -172,12 +168,6 @@ class QwantNewsApp extends React.Component {
         event.preventDefault();
         this.DoAFetch();
     }
-    getUrl= ()=> {
-        //const dataUrl= this.state.respData.slice();
-        //const see = this.state.respData.map(data => data._id);
-        //console.log(this.state.respData);
-        console.log(this.ref.buttonArticle);
-    };
 
     render() {
         // Affiche page news
