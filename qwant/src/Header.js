@@ -11,18 +11,18 @@ import iconeMusique from './images/icon-music.svg';
 import questionMark from './images/question-mark.svg';
 import './css/Header.css';
 
-function InputChecked() {
+function InputUnChecked() {
     return(
         <div className="divNotPopQoz">
-            <label>Qoz est désactivé</label>
+            <label className="divText"><b>Qoz</b> est désactivé</label>
         </div>
     );
 }
 
-function InputUnChecked() {
+function InputChecked() {
     return(
         <div className="divPopQoz">
-            <label>Qoz est activé</label>
+            <label className="divText"><b>Qoz</b> est activé</label>
         </div>
     );
 }
@@ -30,11 +30,39 @@ function InputUnChecked() {
 
 class Header extends Component{
 
-    constructor() {
-        super();
-        this.state = {isChecked: true};
+    constructor(props) {
+        super(props);
+        this.state = {
+            search: "",
+            isChecked: true,
+            myDivPop: false
+        };
+
         this.handleCheckboxChecked = this.handleCheckboxChecked.bind(this);
+        this.handleSubmitSearch = this.handleSubmitSearch.bind(this);
+        this.handleChangeSearch = this.handleChangeSearch.bind(this);
     }
+
+
+    getData(){
+        setTimeout(() => {
+            this.setState({myDivPop: true})
+        }, 3000)
+    }
+
+
+
+    handleChangeSearch(event) {
+        event.preventDefault();
+        this.setState({'search': event.target.value});
+    }
+
+    handleSubmitSearch(event) {
+        event.preventDefault();
+        this.props.callBack();
+        console.log(this.props);
+    }
+
 
     handleCheckboxChecked() {
         this.setState({isChecked: !this.state.isChecked});
@@ -44,18 +72,29 @@ class Header extends Component{
 
         let txt;
         if (this.state.isChecked) {
-            txt = <InputUnChecked/>
+            txt = <InputChecked/>
         }
         else {
-          txt = <InputChecked/>
+          txt = <InputUnChecked/>
         }
+
+        if (this.state.isChecked) {
+            this.getData()
+        }
+        else if (!this.state.isChecked) {
+            this.getData();
+        }
+
 
         return(
             <div>
                 <div className="global_search">
                     <div className="search_bar">
                         <img className="search_logo" src={myImage}/>
-                        <input placeholder="Search..." className="search_text" type="text"/>
+                        <form onSubmit= {this.handleSubmitSearch}>
+                            <input id="SearchInput" placeholder="Search..." value={this.state.search} onChange={this.handleChangeSearch}
+                                   className="search_text" type="text"/>
+                        </form>
                         <a className="link_magnifying" href="#">
                             <img className="magnifyingGlass" src={manifying}/>
                         </a>
@@ -120,7 +159,7 @@ class Header extends Component{
                         <a href="/" className="link_section">Paramètre</a>
                     </nav>
                     <nav>
-                        <div>
+                        <div hidden={this.state.myDivPop}>
                             {txt}
                         </div>
                     </nav>
