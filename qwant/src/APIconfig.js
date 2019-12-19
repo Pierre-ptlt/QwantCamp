@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from "react-dom";
 import './App.css';
 import Header from "./Header";
+import FavoriteBar from "./FavoriteBar";
 
 
 let globalDateLocale = "fr-FR";
@@ -172,8 +173,11 @@ class QwantNewsApp extends React.Component {
         // Affiche page news
         return (
             <div className="QwantNews">
-
+                <Header callBack = {this.handleSubmitSearch}/>
                 <div className="News">
+                    <div className="div-left">
+                        <FavoriteBar/>
+                    </div>
                     <QwantArticles articles = {this.state.respData} />
                 </div>
                 <div>
