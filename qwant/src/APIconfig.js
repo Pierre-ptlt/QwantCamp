@@ -73,11 +73,11 @@ class QwantArticle extends React.Component {
 
         if (this.props.article.media.length > 0)
             htmlMarkup = `
-        <li className = "Article">
+        <li className="Article">
           <a href="${this.props.article.url}" target=_blank>${this.props.article.title}</a>
           <p>
              <a href="${this.props.article.url}" target=_blank>
-               <img src = "${this.props.article.media[0].pict.url}" alt = "article image"  height = "${this.props.article.media[0].pict.height}" />
+               <img src="${this.props.article.media[0].pict.url}" alt="article image"  height="${this.props.article.media[0].pict.height}" />
              </a>
           </p>
         </li>
@@ -86,7 +86,7 @@ class QwantArticle extends React.Component {
       `;
         else
             htmlMarkup = `
-        <li className = "Article">
+        <li className="Article">
           <a href="${this.props.article.url}" target=_blank>${this.props.article.title}</a>
           <p>
           <a href="${this.props.article.url}" target=_blank>
@@ -179,8 +179,6 @@ class QwantNewsApp extends React.Component {
                         <FavoriteBar/>
                     </div>
                     <QwantArticles articles = {this.state.respData} />
-                </div>
-                <div>
                 </div>
             </div>
         );
