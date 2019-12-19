@@ -90,43 +90,43 @@ class Header extends Component{
             <div>
                 <div className="global_search">
                     <div className="search_bar">
-                        <img className="search_logo" src={myImage}/>
+                        <img className="search_logo" alt='logo' src={myImage}/>
                         <form onSubmit= {this.handleSubmitSearch}>
                             <input id="SearchInput" placeholder="Search..." value={this.state.search} onChange={this.handleChangeSearch}
                                    className="search_text" type="text"/>
                         </form>
-                        <a className="link_magnifying" href="#">
-                            <img className="magnifyingGlass" src={manifying}/>
+                        <a className="link_magnifying" href="https://www.qwant.com/">
+                            <img className="magnifyingGlass" alt="magnifyingClass" src={manifying}/>
                         </a>
                     </div>
                     <div className="search_options">
-                         <img className="Qoz_options" src={myQoz}/>
+                         <img className="Qoz_options" alt="qozOptions" src={myQoz}/>
                          <p className="divQoz">
                              <label className="switch">
                                  <input name="checkbox" type="checkbox" checked={this.state.isChecked} onChange={this.handleCheckboxChecked} />
                                      <span className="slider round"></span>
                              </label>
                              <button className="btnQuestion">
-                                 <a href="https://www.qwant.com/causes/fr_fr/reports?display=all_assos" target="_blank">
-                                 <img className="questionMark" src={questionMark}/>
+                                 <a href="https://www.qwant.com/causes/fr_fr/reports?display=all_assos" rel="noopener noreferrer" target="_blank">
+                                 <img className="questionMark" alt='question mark' src={questionMark}/>
                                  </a>
                              </button>
                          </p>
                         <div className="menuProduit">
                             <div className="dropdown">
-                                <button className="dropbtn1"><img className="imgIconeProduit" src={inconeproduit}/></button>
+                                <button className="dropbtn1"><img className="imgIconeProduit" alt="iconeProduit" src={inconeproduit}/></button>
                                 <div className="dropdown-content">
                                     <table>
                                         <tr>
-                                            <td><a className="link_spec_produit" href="https://www.qwant.com" target="_blank"><img src={iconeQwant}/><span className="spec_produit">Qwant</span></a></td>
-                                            <td><a className="link_spec_produit" href="https://www.qwantjunior.com" target="-_blank"><img src={iconeJunior}/><span className="spec_produit">Junior</span></a></td>
+                                            <td><a className="link_spec_produit" href="https://www.qwant.com" target="_blank" rel="noopener noreferrer"><img alt="iconQwant" src={iconeQwant}/><span className="spec_produit">Qwant</span></a></td>
+                                            <td><a className="link_spec_produit" href="https://www.qwantjunior.com" target="-_blank"><img alt="iconJunior" src={iconeJunior}/><span className="spec_produit">Junior</span></a></td>
                                         </tr>
                                         <tr>
-                                            <td><a className="link_spec_produit" href="https://www.qwant.com/maps" target="_blank"><img src={iconeMaps}/><span className="spec_produit">Maps</span></a></td>
-                                            <td><a className="link_spec_produit" href="https://www.qwant.com/music" target="_blank"><img src={iconeMusique}/><span className="spec_produit">Music</span></a></td>
+                                            <td><a className="link_spec_produit" href="https://www.qwant.com/maps" rel="noopener noreferrer" target="_blank"><img alt="iconeMaps" src={iconeMaps}/><span className="spec_produit">Maps</span></a></td>
+                                            <td><a className="link_spec_produit" href="https://www.qwant.com/music" rel="noopener noreferrer" target="_blank"><img alt="iconeMusique" src={iconeMusique}/><span className="spec_produit">Music</span></a></td>
                                         </tr>
                                         <tr>
-                                            <td><a className="link_spec_produit" href="https://www.qwant.com/causes" target="_blank"><img src={iconeCauses}/><span className="spec_produit">Causes</span></a></td>
+                                            <td><a className="link_spec_produit" href="https://www.qwant.com/causes" rel="noopener noreferrer" target="_blank"><img alt="iconeCauses" src={iconeCauses}/><span className="spec_produit">Causes</span></a></td>
                                         </tr>
                                     </table>
                                 </div>
@@ -149,8 +149,8 @@ class Header extends Component{
                         <div className="dropdown">
                             <button className="dropbtn"><p className="link_section">Plus</p></button>
                             <div className="dropdown-content">
-                                <a className="link_plus" href="#"><span>Causes</span></a>
-                                <a className="link_plus" href="#"><span>Music</span></a>
+                                <a className="link_plus" href="https://www.qwant.com/"><span>Causes</span></a>
+                                <a className="link_plus" href="https://www.qwant.com/"><span>Music</span></a>
                             </div>
                         </div>
                         <a href="/" className="link_section">À propos</a>
