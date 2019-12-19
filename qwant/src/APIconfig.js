@@ -3,7 +3,6 @@ import ReactDOM from "react-dom";
 import './App.css';
 import Header from "./Header";
 
-
 let globalDateLocale = "fr-FR";
 
 const fetchOptions = {
@@ -17,7 +16,6 @@ const fetchOptions = {
         Token: "5dkCdp67D4a7zcOrSZrSqIqPmYZNf8Re"
     }
 };
-
 function QwantOptions() {
 
     this.Query = "france";
@@ -52,7 +50,6 @@ function PrepareQwantOptions(queryOptions) {
     return strOptions;
 }
 
-
 function QwantDate(qwantDate) {
     const jsDate = new Date(0);
     jsDate.setSeconds(jsDate.getSeconds() + qwantDate);
@@ -63,8 +60,6 @@ function QwantDate(qwantDate) {
         year: "numeric"
     });
 }
-
-// Rendering an article
 class QwantArticle extends React.Component {
     render() {
 
@@ -95,31 +90,42 @@ class QwantArticle extends React.Component {
                 <p>Source : ${this.props.article.domain}</p>
                 `;
         }
-
         return (
             <p dangerouslySetInnerHTML={{__html: htmlMarkup}}/>
         );
     }
 }
 
-// Affiche tous les articles
+
+
 class QwantArticles extends React.Component {
+    buttonArticle: React.createRef;
+    test(singleUrl){
+
+    };
+
     render() {
         if (this.props.articles.length === 0)
             return (<p><b>Chargement des articles ...</b></p>);
-
         const articles = this.props.articles.map((item) => (
-            <QwantArticle article={item}/>
+            <li>
+                <QwantArticle article={item}/>
+                <button ref={this.buttonArticle} onClick={()=> this.test(item.url)} >Add Favorites List</button>
+            </li>
         ));
-
         return (
             <div className="Articles">
-                <ul>{articles}</ul>
+
+                <ul>
+                    <li>
+                        {articles}
+                        {this.buttonArticle}
+                    </li>
+                </ul>
             </div>
         );
     }
 }
-
 class QwantNewsApp extends React.Component {
     constructor(props) {
         super(props);
@@ -140,7 +146,6 @@ class QwantNewsApp extends React.Component {
             this.queryOptions.Query = this.lookFor;
 
         const urlOptions = PrepareQwantOptions(this.queryOptions);
-        console.log(urlOptions);
         if (this.lastQuery === urlOptions)
             return;
         this.lastQuery = urlOptions;
@@ -167,7 +172,12 @@ class QwantNewsApp extends React.Component {
         event.preventDefault();
         this.DoAFetch();
     }
-
+    getUrl= ()=> {
+        //const dataUrl= this.state.respData.slice();
+        //const see = this.state.respData.map(data => data._id);
+        //console.log(this.state.respData);
+        console.log(this.ref.buttonArticle);
+    };
 
     render() {
         // Affiche page news
