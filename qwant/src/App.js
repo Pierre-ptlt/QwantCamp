@@ -8,11 +8,9 @@ import './App.css';
 function App() {
     return(
         <div>
-                <div className="div-left">
-                    <QwantNewsApp/>
-                </div>
-            <QwantNewsApp />
-            <QwantNewsApp/>
+            <div className="div-left">
+                <QwantNewsApp/>
+            </div>
         </div>
     );
 }
