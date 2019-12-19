@@ -2,12 +2,10 @@ import React, {Component} from 'react';
 import FavoriteList from "./Componentes/FavoriteList";
 import FavoriteAdd from "./Componentes/FavoriteAdd";
 import "./css/Favorite.css"
-import QwantNewsApp from "./APIconfig";
-
 
 class FavoriteBar extends Component {
-    //< span aria-label = " une fusée décollant " role = " img " >   🚀 </ span >
-    // < span aria-hidden = " true " role = " img " >   🤫 </ span >
+    //< span aria-label = " une fusée décollant " role = "img" >   🚀 </ span >
+    //< span aria-hidden = "true" role = "img" >   🤫 </ span >
 
     displayFavoriteBar = React.createRef();
     constructor(props) {

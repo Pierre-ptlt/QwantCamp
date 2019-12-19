@@ -10,9 +10,12 @@ function App() {
     return(
         <div>
             <Header/>
+                <div className="div-left">
+                    <FavoriteBar/>
+                </div>
+            <QwantNewsApp />
         </div>
     );
 }
 
 export default App;
-

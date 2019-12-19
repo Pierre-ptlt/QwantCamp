@@ -1,8 +1,6 @@
 import React from 'react';
-import ReactDOM from "react-dom";
 import './App.css';
-import Header from "./Header";
-import FavoriteAdd from "./Componentes/FavoriteAdd";
+
 
 let globalDateLocale = "fr-FR";
 
@@ -61,9 +59,10 @@ function QwantDate(qwantDate) {
         year: "numeric"
     });
 }
+
+
 class QwantArticle extends React.Component {
     render() {
-
         let htmlMarkup = null;
 
         if (this.props.article.media.length > 0)
@@ -97,13 +96,16 @@ class QwantArticle extends React.Component {
     }
 }
 
-
-
 class QwantArticles extends React.Component {
     buttonArticle: React.createRef;
-    getUrl(singleUrl){        // récupération de l'url de l'article selectionné
-
-        console.log(singleUrl)
+    state= {
+      link: []
+    };
+    getUrl(singleUrl){          // récupération de l'url de l'article selectionné
+    const  link= [...this.state.link];
+    link.push(singleUrl);
+    this.setState({link: ""});
+        console.log(link)
     };
 
     render() {
@@ -122,6 +124,8 @@ class QwantArticles extends React.Component {
         );
     }
 }
+
+
 class QwantNewsApp extends React.Component {
     constructor(props) {
         super(props);

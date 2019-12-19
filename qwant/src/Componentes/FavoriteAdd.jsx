@@ -6,8 +6,7 @@ class FavoriteAdd extends Component {
         newFavorite: " "
 };
     handleChange = event => {
-
-        //this.setState({newFavorite: event.currentTarget.value});
+        this.setState({newFavorite: event.currentTarget.value});
     };
     handleFormula = event => {
         event.preventDefault();

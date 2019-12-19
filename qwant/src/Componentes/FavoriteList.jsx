@@ -1,6 +1,6 @@
-import React/*, {Component} */, {useState} from "react";
+import React from "react";
 import "../css/Favorite.css"
-import { Link } from 'react-router-dom';
+
 /*class FavoriteList extends Component {
     render() {
         //const list =this.props.list;
@@ -10,7 +10,7 @@ const FavoriteList =( {list, onDelete} )=>(
             <li>
                {list.link}
                     <button className="button_X" onClick={() => onDelete(list.id)}>
-                        <span aria-label = " red cross " role = " img " > ❌ </ span ></button>
+                        <span  role = "img" aria-label = " red cross " > ❌ </ span ></button>
             </li>
 );
 export default FavoriteList;
