@@ -1,4 +1,9 @@
 .div-left{
   float: left;
-  margin-right: 10%;
+  margin-right: 5%;
+}
+
+.Articles {
+  column-count: 2;
+  width: 55%
 }

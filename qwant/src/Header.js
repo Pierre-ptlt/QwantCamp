@@ -118,15 +118,15 @@ class Header extends Component{
                                 <div className="dropdown-content">
                                     <table>
                                         <tr>
-                                            <td><a className="link_spec_produit" href="/"><img src={iconeQwant}/><span className="spec_produit">Qwant</span></a></td>
-                                            <td><a className="link_spec_produit" href="/"><img src={iconeJunior}/><span className="spec_produit">Junior</span></a></td>
+                                            <td><a className="link_spec_produit" href="https://www.qwant.com" target="_blank"><img src={iconeQwant}/><span className="spec_produit">Qwant</span></a></td>
+                                            <td><a className="link_spec_produit" href="https://www.qwantjunior.com" target="-_blank"><img src={iconeJunior}/><span className="spec_produit">Junior</span></a></td>
                                         </tr>
                                         <tr>
-                                            <td><a className="link_spec_produit" href="/"><img src={iconeMaps}/><span className="spec_produit">Maps</span></a></td>
-                                            <td><a className="link_spec_produit" href="/"><img src={iconeMusique}/><span className="spec_produit">Music</span></a></td>
+                                            <td><a className="link_spec_produit" href="https://www.qwant.com/maps" target="_blank"><img src={iconeMaps}/><span className="spec_produit">Maps</span></a></td>
+                                            <td><a className="link_spec_produit" href="https://www.qwant.com/music" target="_blank"><img src={iconeMusique}/><span className="spec_produit">Music</span></a></td>
                                         </tr>
                                         <tr>
-                                            <td><a className="link_spec_produit" href="/"><img src={iconeCauses}/><span className="spec_produit">Causes</span></a></td>
+                                            <td><a className="link_spec_produit" href="https://www.qwant.com/causes" target="_blank"><img src={iconeCauses}/><span className="spec_produit">Causes</span></a></td>
                                         </tr>
                                     </table>
                                 </div>
